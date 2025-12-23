@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: url("images/abstract-gradient-1.jpg") center / cover no-repeat fixed;
+  min-height: 100vh;
+  padding: 40px 5%;
+  color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 30px;
+  backdrop-filter: blur(25px);
+  animation: zoom-in 0.8s ease forwards;
+}
+
+@keyframes zoom-in {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+header {
+  padding: 30px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 4px;
+  transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  border-color: #fff;
+}
+
+.about-me {
+  padding: 20px 40px 60px;
+  text-align: center;
+}
+
+.my-img {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 25px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #fff;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+}
+
+.my-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-me h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.introduction {
+  max-width: 800px;
+  margin: auto;
+}
+
+.introduction p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.tool-kit {
+  margin-top: 60px;
+}
+
+.tool-kit h2 {
+  margin-bottom: 30px;
+}
+
+.tool-icons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 25px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.tool-icons span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  justify-content: center;
+}
+
+.education {
+  margin-top: 70px;
+}
+
+.education h2 {
+  margin-bottom: 40px;
+}
+
+.studies {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.studies h3 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.studies p {
+  font-size: 0.95rem;
+}
+
+.certificates {
+  margin-top: 50px;
+}
+
+.certificates h3 {
+  margin-bottom: 20px;
+}
+
+.certificates ul {
+  max-width: 700px;
+  margin: auto;
+  text-align: left;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
+  .about-me {
+    padding: 20px;
+  }
+
+  .about-me h1 {
+    font-size: 2rem;
+  }
+
+  .introduction p {
+    font-size: 1rem;
+  }
+}

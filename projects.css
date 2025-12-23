@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif; 
+}
+
+body {
+  background: url("images/abstract-gradient-1.jpg") no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 20px; 
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  background: rgba(255, 255, 255, .1);
+  border: 2px solid rgba(255, 255, 255, .2);
+  border-radius: 30px;
+  backdrop-filter: blur(30px);
+  padding-bottom: 50px;
+  transform: scale(0);
+  animation: zoom-in 0.8s ease forwards;
+}
+
+@keyframes zoom-in {
+  100% { transform: scale(1); }
+}
+
+header {
+  display: flex;
+  padding: 30px;
+  justify-content: center;
+}
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.navbar a {
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  border-color: #fff;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  margin: 30px 0;
+  font-size: 2.5rem;
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 0 20px;
+}
+
+.project-card {
+  color: white;
+  width: 100%;
+  max-width: 700px; 
+  background-color: rgba(20, 22, 28, 0.7); 
+  backdrop-filter: blur(10px); 
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  padding: 2rem;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  background-color: rgba(40, 45, 55, 0.9); 
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
+  transform: translateY(-5px);
+}
+
+.project-card h3 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.project-card p {
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+.links {
+  display: inline-block;
+  color: #00d4ff;
+  text-decoration: none;
+  margin-top: 20px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.links:hover {
+  text-shadow: 0 0 10px #00d4ff;
+  transform: translateX(5px);
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin: 20px 0;
+  }
+
+  .navbar a {
+    font-size: 16px;
+    margin-left: 0; 
+  }
+
+  .project-card {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    gap: 10px;
+  }
+
+  .navbar a {
+    font-size: 14px;
+  }
+
+  .container {
+    border-radius: 15px;
+  }
+  
+  .project-card h3 {
+    font-size: 1.2rem;
+  }
+}
