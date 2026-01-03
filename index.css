@@ -111,7 +111,8 @@ header {
 .home-detail h2 { 
   font-size: 28px; 
   font-weight: 400; 
-  margin-bottom: 15px; 
+  margin-bottom: 15px;
+  text-align: center; 
 }
 
 .highlight { 
